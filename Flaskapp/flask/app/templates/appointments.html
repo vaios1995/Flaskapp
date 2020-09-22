@@ -1,0 +1,10 @@
+{% extends "layout.html"  %}    
+{%block content%}
+
+  {% for datas in data %}
+  <div class="card-body">
+    <h5 class="card-title">{{ r.get(datas['code']).decode('utf-8') }}</h5>
+    <a href="https://appoint.ly/s/{{ datas['code'] }}/introduction" class="btn btn-primary">Κλείσε Ραντεβού</a>
+  </div>
+  {% endfor %}
+{% endblock content %}
